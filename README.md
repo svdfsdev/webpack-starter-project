@@ -2,10 +2,10 @@
 
 Includes:
 
-- loaders: style, css, sass/scss, babel, xml, file
-- scripts: start, dev, build, stats
-- babel:  js, react, typescript
-- environment: dev, prod
-- devtool
-- eslint (will be updated config)
-- alias
+- Loaders: style, css, sass/scss, babel, xml, file
+- Scripts: start, dev, build, stats
+- Babel:  js, react, typescript
+- Environment: dev, prod
+- Devtool
+- Eslint (will be updated config)
+- Alias
