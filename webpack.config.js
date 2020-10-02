@@ -87,7 +87,11 @@ const plugins = () => {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
+          from: path.resolve(__dirname, 'src/assets/icons'),
+          to: path.resolve(__dirname, 'dist'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/assets/images'),
           to: path.resolve(__dirname, 'dist'),
         },
       ],
@@ -101,6 +105,7 @@ const plugins = () => {
   if (isProd) {
     base.push(new BundleAnalyzerPlugin());
   }
+
   return base;
 };
 
@@ -111,7 +116,7 @@ module.exports = {
 
   entry: {
     main: ['@babel/polyfill', '@/index.js'],
-    // analytics: '@js/analytics.ts', // head scripts
+    analytics: '@js/analytics.ts',
   },
 
   output: {
@@ -123,8 +128,8 @@ module.exports = {
     extensions: ['.js', '.json', '.png', '.jpg'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@js': path.resolve(__dirname, 'src/js/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
-      '@scripts': path.resolve(__dirname, 'src/scripts/'),
       '@icons': path.resolve(__dirname, 'src/assets/icons/'),
       '@images': path.resolve(__dirname, 'src/assets/images/'),
     },
@@ -154,8 +159,11 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
 
       {

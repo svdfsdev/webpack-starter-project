@@ -1,0 +1,35 @@
+$border: 1px solid #cccccc;
+
+.card {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: $border;
+  border-radius: 5px;
+
+  h2 {
+    color: darkred;
+    text-align: center;
+  }
+}
+
+.logo {
+  background-image: url(@images/webpack-logo.png);
+  background-size: cover;
+}
+
+.center {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+
+  :hover {
+    opacity: 0.5;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+}

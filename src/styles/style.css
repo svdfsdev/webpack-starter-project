@@ -1,2 +1,22 @@
 @import '~normalize.css';
 @import 'fonts.css';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: darkcyan;
+  background: rgba(14, 13, 13, 0.89);
+}
+
+.container {
+  width: 100px;
+  max-width: 1000px;
+  padding-top: 2rem;
+  margin: 0 auto;
+  background: rgba(192, 192, 192, 0.226);
+  transition: 1s;
+}
+
+h1 {
+  color: darkcyan;
+  text-align: center;
+}
