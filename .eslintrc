@@ -1,0 +1,52 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb/base"
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-alert": "off",
+    "max-len": [
+      "error",
+      100,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "newline-before-return": "warn",
+    "prefer-destructuring": "warn",
+    "no-param-reassign": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        [
+          "@",
+          "./src/"
+        ],
+        [
+          "@js",
+          "./src/js/"
+        ],
+        [
+          "@styles",
+          "./src/styles/"
+        ],
+        [
+          "@icons",
+          "./src/assets/icons/"
+        ],
+        [
+          "@images",
+          "src/assets/images/"
+        ]
+      ]
+    }
+  }
+}
