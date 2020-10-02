@@ -7,5 +7,6 @@ Includes:
 - Babel:  js, react, typescript
 - Environment: dev, prod
 - Devtool
-- Eslint (will be updated config)
+- Eslint
+- Stylelint
 - Alias
